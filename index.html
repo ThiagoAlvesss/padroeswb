@@ -4,17 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        header{
+            display: flex;
+            gap: 420px;
+        }
+        .logo img{
+            width: 250px;
+            height: 80px;
+        }
+        .menu ul{
+            display: flex;
+            gap: 50px;
+        }
+        .menu li{
+            padding: 20px;
+            list-style-type: none;
+        }
+        .title{
+            padding: 10px;
+        }
+        .projetos{
+            display: flex;
+            gap: 50px;
+            padding: 10px;
+        }
+        #projeto1 img{
+            width: 250px;
+            height: 250px;
+            border-radius: 5px;
+        }
+        #projeto2 img{
+            width: 250px;
+            height: 250px;
+            border-radius: 5px;
+        }
+        #projeto3 img{
+            width: 250px;
+            height: 250px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Exercícios</h1>
-    <div>
-        <a href="projeto1/index.html">Calculando a média</a>
-    </div>
-    <div>
-        <a href="projeto2/index.html">Calculando o IMC</a>
-    </div>
-    <div>
-        <a href="projeto3/index.html">AppendChild Method</a>
-    </div>
+    <header>
+        <div class="logo">
+            <img src="images/Senac_logo.png" alt="logo_senacDF">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="">Sobre mim</a></li>
+                <li><a href="">Projetos</a></li>
+                <li><a href="">SenacDF</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="title">
+            <h1>Exercícios Padrões Web</h1>
+        </div>
+        <div class="projetos">
+            <div id="projeto1">
+                <a href="projeto1/index.html"><img src="images/study.png" alt=""></a>
+            </div>
+    
+            <div id="projeto2">
+                <a href="projeto2/index.html"><img src="images/imc.png" alt=""></a>
+            </div>
+    
+            <div id="projeto3">
+                <a href="projeto3/index.html"><img src="images/listacp.png" alt=""></a>
+            </div>
+        </div>
+    </main>
+    
 </body>
 </html>
