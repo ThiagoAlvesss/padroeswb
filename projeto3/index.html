@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+  <style>
+    body {
+      background-color: #18181b;
+    }
+
+    main{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      gap: 200px;
+    }
+
+    .image img {
+      width: 250px;
+      height: 250px;
+    }
+  </style>
+</head>
+
 <body>
+  <main>
+    <div class="image">
+      <img src="../images/listacomp.png" alt="">
+    </div>
+  
+    <div>
+      <h2>Adicionar item a uma lista</h2>
+  
+      <input type="text" id="itemText" placeholder="Digite o texto do item">
+      <br><br>
+  
+      <input type="radio" name="color" value="red"> Vermelho
+      <input type="radio" name="color" value="blue"> Azul
+      <input type="radio" name="color" value="green"> Verde
+      <br><br>
+  
+      <button onclick="addItem()">Adicionar</button>
+  
+      <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </div>
+  </main>
+  
 
-<h2>Adicionar item a uma lista</h2>
+  <script>
+    function addItem() {
+      var text = document.getElementById("itemText").value;
+      var color = document.querySelector('input[name="color"]:checked').value;
 
-<input type="text" id="itemText" placeholder="Digite o texto do item">
-<br><br>
+      var node = document.createElement("LI");
+      var textNode = document.createTextNode(text);
+      node.appendChild(textNode);
+      node.style.color = color;
 
-<input type="radio" name="color" value="red"> Vermelho
-<input type="radio" name="color" value="blue"> Azul
-<input type="radio" name="color" value="green"> Verde
-<br><br>
-
-<button onclick="addItem()">Adicionar</button>
-
-<ul id="myList">
-  <li>Item 1</li>
-  <li>Item 2</li>
-</ul>
-
-<script>
-function addItem() {
-  var text = document.getElementById("itemText").value;
-  var color = document.querySelector('input[name="color"]:checked').value;
-
-  var node = document.createElement("LI");
-  var textNode = document.createTextNode(text);
-  node.appendChild(textNode);
-  node.style.color = color;
-
-  document.getElementById("myList").appendChild(node);
-}
-</script>
+      document.getElementById("myList").appendChild(node);
+    }
+  </script>
 
 </body>
+
 </html>
